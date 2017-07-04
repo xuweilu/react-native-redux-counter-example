@@ -3,17 +3,14 @@
  */
 
 import * as types from '../constants';
-
-const initialState = {
-    count: 0
-};
+import update from 'react-addons-update';
 
 const counter = (state = 0, action) => {
     switch (action.type) {
         case types.INCREMENT:
-            return(state + 1);
+            return update(state, {$set: state + 1});
         case types.DECREMENT:
-            return(state - 1);
+            return update(state, {$set: state - 1});
         default:
             return state;
     }
