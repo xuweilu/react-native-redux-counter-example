@@ -2,7 +2,7 @@
  * Created by william on 2017/7/3.
  */
 
-import * as types from '../constants';
+import * as types from '../actionTypes';
 
 let ActionCreators = {
     increment() {
