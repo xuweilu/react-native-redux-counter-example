@@ -1,17 +1,27 @@
-import React, {Component} from 'react';
-import {AppRegistry} from 'react-native';
+import React from 'react';
+import {Navigation} from 'react-native-navigation';
 import {Provider} from 'react-redux';
+import registerScreens from './app/screens';
+
 import store from './app/store/store';
-import Counter from './app/components/Counter';
 
-export default class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-              <Counter/>
-            </Provider>
-        )
+registerScreens(store, Provider);
+
+const navigatorStyle = {
+    navBarTranslucent: true,
+    drawUnderNavBar: true,
+    navBarTextColor: 'white',
+    navBarButtonColor: 'white',
+    statusBarTextColorScheme: 'light',
+    drawUnderTabBar: true
+};
+
+Navigation.startSingleScreenApp({
+    screen: {
+        screen: 'example.ProductsList',
+        title: 'Welcome',
+        navigatorStyle: navigatorStyle,
     }
-}
+});
 
-AppRegistry.registerComponent('counter', () => App);
+

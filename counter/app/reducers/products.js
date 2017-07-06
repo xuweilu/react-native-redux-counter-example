@@ -1,4 +1,4 @@
-import * as types from '../actionTypes';
+import types from '../constants';
 import update from 'react-addons-update';
 
 const products = (state = [], action) => {

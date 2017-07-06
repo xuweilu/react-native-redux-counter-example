@@ -1,17 +1,7 @@
-import * as types from '../actionTypes';
+import types from '../constants';
 import API from '../api/API';
 
 let ActionCreators = {
-    increment() {
-        return (dispatch) => {
-            dispatch({type: types.INCREMENT});
-        }
-    },
-    decrement() {
-        return (dispatch) => {
-            dispatch({type: types.DECREMENT});
-        }
-    },
     fetchProducts() {
         return (dispatch) => {
             dispatch({type: types.REQUEST_PRODUCTS});

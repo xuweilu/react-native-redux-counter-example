@@ -7,3 +7,8 @@ export const API_HEADERS = {
 export const API_URLS = new Map([
     ['products', `${API_DOMAIN}/products`],
 ]);
+
+export default {
+    REQUEST_PRODUCTS: 'request products',
+    RECEIVE_PRODUCTS: 'receive products',
+}
