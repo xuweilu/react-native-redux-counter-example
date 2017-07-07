@@ -1,4 +1,4 @@
-export const API_DOMAIN = 'http://localhost:5500';
+export const API_DOMAIN = 'http://10.10.10.37:5500';
 
 export const API_HEADERS = {
     'Content-Type': 'application/json'
